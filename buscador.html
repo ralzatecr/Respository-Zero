@@ -71,6 +71,30 @@
         margin: 0px;
         color: whitesmoke;
     }
+
+    .main{
+        height: 300px;
+    }
+    .main__title{
+        color: whitesmoke;
+        font-size: 25px;
+    }
+    .input{
+        background-color: rgba(255, 255, 255, 0.1); /* color del input mismo que el fondo  */
+        border: 2px solid yellowgreen; /* Para marcar el borde del input */
+        border-radius: 50px; /* redondear bordes del input */
+        color: whitesmoke;
+        font-family: 'Muli', ; /* para que toda las letras de la aplicacion queden con el tipo de letra */  
+        font-size: 16px;
+        height: 50px;
+        padding: 0px 20px;
+        width: 70%; /* valor relativo para el tamaño de pantalla */
+        outline: none; /* Quitar la linea azul que aparece cuando se da clic en el input */
+        box-sizing:border-box;
+    }
+    ::placeholder{ /* Para el color del texto en la caja input */
+        color: whitesmoke;
+    }
 </style>
 <body>
     <header class="header">
@@ -78,13 +102,17 @@
         <div class="header__menu">
             <div class="header__menu--profile">
                 <img src="./usuario.png" alt="Users"> <!--./ indica que la imagen esta al mismo nivel del archivo html-->
-                <p>Perfil</p>
+                <p>Profile</p>
             </div>
                 <ul><!--lista-->
-                    <li><a href="/">Cuenta</a></li><!--items-->
-                    <li><a href="/">Cerrar Sesion</a></li>
+                    <li><a href="/">Account</a></li><!--items-->
+                    <li><a href="/">Login Out</a></li>
                 </ul>
         </div>
     </header>
+    <section class="main">
+        <h2 class="main__title">¿What is your metal song for today?</h2>
+        <input class="input" type="text" placeholder="  Find..."><!--escribe un texto en la caja-->
+    </section>
 </body>
 </html>
