@@ -95,6 +95,47 @@
     ::placeholder{ /* Para el color del texto en la caja input */
         color: whitesmoke;
     }
+    
+    .carousel{
+        width: 100%;
+        overflow: scroll;
+        padding: 30px;
+        position: relative; /* todos los objetos que esten contenidos aqui van a ajustarse al tamaño. */
+    }
+    
+    .carousel__container{
+        white-space: nowrap; /* permitir que los objetos se vayan de largo */
+        margin: 70px 0px;
+        padding-bottom: 10;
+    }
+
+    .carousel_item{
+        width: 200px;
+        height: 250px;
+        border-radius: 20px;
+        background-color: gray;
+        overflow: hidden;
+        margin-right: 10px ;
+        display: inline-block; /* hace que los div se organicen de manera horizontal */
+        cursor: pointer; /* cambia el cursor por una mano */
+        transition: 450ms; /*  animacion mas fluida mas suave */
+        transform-origin: center left; /* para que no se salga del margen y que empiece de izquierda a derecha. */
+
+    }
+ 
+    .carousel_item:hover ~ .carousel_item{ /* que sea para el item actual y cuando no se haga hover, se desplace a la derecha */
+        transform:translate3d(100px, 0, 0); /* cuando haga hover todos los elementos se desplazan a la derecha */
+
+    }
+
+    .carousel__container:hover .carousel_item{ /* al hacer hover sobre el container los item se vuelvan opacos */
+        opacity: 0.3;
+    }
+
+    .carousel__container:hover .carousel_item:hover{
+        transform: scale(1.5); /* incrementa el tamaño del item cuando se hace hover y cambia la opacidad */
+        opacity: 1;
+    }
 </style>
 <body>
     <header class="header">
@@ -114,5 +155,14 @@
         <h2 class="main__title">¿What is your metal song for today?</h2>
         <input class="input" type="text" placeholder="  Find..."><!--escribe un texto en la caja-->
     </section>
+    <section class="carousel">
+        <div class="carousel__container">
+            <div class="carousel_item">
+            </div>
+            <div class="carousel_item">
+            </div>
+        </div>
+    </section>
+    
 </body>
 </html>
