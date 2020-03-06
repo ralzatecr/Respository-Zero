@@ -4,40 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscador metodologia BEM</title>
-    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet"><!--fuentes para los parrafos https://fonts.google.com/-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli&display=swap"><!--fuentes para los parrafos https://fonts.google.com/-->
+    <link rel="stylesheet" href="./style.css"><!--importar el archivo de estilos-->
 </head>
-<style>
-    body{
-        margin: 0px;
-        background-color: #146404;
-        font-family: 'Muli', ; /* para que toda las letras de la aplicacion queden con el tipo de letra */      
-    }
-    .header{
-        background-color: #146404;
-        width: 100%;
-        height: 80px;
-        display: flex; /* para ubicar la lista menu arriba a la derecha */
-        justify-content: space-between; /* contenedor poner los dos lementos de cabecera con un espacio en el medio*/;
-        align-items: center;
-    }
-    .header__img {
-        width: 200px;
-        margin-top: 10px;
-        margin-left: 10px;
-    }
-
-</style>
 <body>
     <header class="header">
         <img class="header__img" src="file:///Users/ralzate/Documents/progBasica/Respository-Zero/logo.png" alt="">
     </header>
     <section class="login">
         <section class="login__container">
-            <h2>Inicio de Sesion</h2>
+            <h2>Inicio de Sesión</h2>
             <form class="login__container--form" action="">
-                <input class="input" type="text" placeholder="correo"><!--placeholder para poner una leyenda a la caja de texto-->
-                <input class="input" type="password" placeholder="contraseña">
-                <button class="button">Iniciar Sesion</button>
+                <input class="input" type="text" placeholder="Correo"><!--placeholder para poner una leyenda a la caja de texto-->
+                <input class="input" type="password" placeholder="Contraseña">
+                <button class="button">Iniciar Sesión</button>
                 <div class="login__container--remember-me">
                     <label> <!--<label for="">el for es para definir a que input hace referencia, en este caso no se usa-->
                         <input type="checkbox" id="caja_1" value="checkbox" >Recordar
@@ -46,8 +26,8 @@
                 </div>
             </form>
             <section class="login__container--social-media">
-                <div><img src="./icons/google.png" alt="Google">Inicia Sesion con Google</div>
-                <div><img src="./icons/twitter.png" alt="Twitter">Inicia Sesion con Twitter</div>
+                <div><img src="./icons/google.png" alt="Google">Inicia Sesión con Google</div>
+                <div><img src="./icons/twitter.png" alt="Twitter">Inicia Sesión con Twitter</div>
             </section>
             <p class="login__container--register">No tiene cuenta
                 <a href="">Registrarse</a>
