@@ -1,0 +1,151 @@
+
+    body{
+        margin: 0px;
+        background-color: #21C08B;
+        font-family: 'Muli', ; /* para que toda las letras de la aplicacion queden con el tipo de letra */      
+    }
+    .header{
+        background-color: #21C08B;
+        width: 100%;
+        height: 80px;
+        display: flex; /* para ubicar la lista menu arriba a la derecha */
+        justify-content: space-between; /* contenedor poner los dos lementos de cabecera con un espacio en el medio*/;
+        align-items: center;
+    }
+    .header__img {
+        width: 200px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .login{
+        background:linear-gradient(#21C08B,#AB88FF);
+        display: flex; /* Para acomodar los componentes */
+        align-items: center; /* Alinear itesm*/
+        justify-content: center; /* Alinear de forma horizontal*/
+        flex-direction: column;/*Para ubicar todos los elementos de arriba a abajo*/
+        padding: 0px 30px; /* Arriba abajo, derecha izquierda */
+        min-height: calc(10vh - 200px)/* Por mas alto que sea la pantalla siempre tendra el valor indicado aqui */;
+                              /* vh View high medida relativa similar al % basado en la pantalla que esta viendo el usuario*/
+                              /* Aplique exceptuando el tamaño del header y el footer */
+    }
+
+    .login__container{
+        color: white;
+        background-color: rgba(255, 255, 255, 0.1); /* Definir el color por valor */
+        border: 2px solid whitesmoke;
+        border-radius: 40px;/* Redondeo esquinas del rectangulo */
+        padding: 60px 68px 40px;
+        min-height: 700px;
+        width: 300px; /* Para que no cambie la medida */
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .login__container--form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .login__container--form label{
+        font-size: 14px;
+    }
+
+    .login__container--remember-me{
+        color: whitesmoke;
+        display: flex;
+        justify-content: space-between; /* Para un espacio en medio de los dos elementos */
+        margin-top: 10px;
+
+    }
+
+    .login__container--remember-me a{
+        color: whitesmoke;
+        display: flex;
+        text-decoration: none;
+    }
+
+    .login__container--remember-me a:hover{
+        text-decoration: underline;
+    }
+
+    .login__container--social-media > div{ /* Todas las div que esten dentro de esa clase */
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .login__container--social-media > div > img{ /* Todas las imagenes dentro del div que esten dentro de esa clase */
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    .login__container--register{
+        color: white;
+        font-size: 14px;
+    }
+
+    .login__container--register a{
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    .login__container--register a:hover{
+        text-decoration: underline;
+    }
+
+    .input{
+        background-color: transparent;
+        border-left: 0px;
+        border-top: 0px;
+        border-right: 0px;
+        border-bottom: 2px solid white;
+        font-size: 16px;
+        font-family: 'Muli', sans-serif;
+        margin-bottom: 20px;
+        padding: 0px 20px;
+        outline: none;
+        height: 50px;
+    }
+
+    ::placeholder{
+        color: white; /* color de los textos sobre los input */
+    }
+
+    .button{
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 25px;
+        color: white;
+        cursor: pointer; /* Para que aparezca la manita de presionar */
+        font-size: 16px;
+        font-weight: bold;
+        font-family: 'Muli', sans-serif;
+        height: 50px;
+        letter-spacing: 1px;
+        margin: 10px 0px;
+
+    }
+
+    .footer{
+        background-color: #AB88FF;
+        display: flex;
+        align-items: center;
+        height: 100px;
+        width: 100%; /* Para tomar toda la pantalla */
+    }
+
+    .footer a{
+        color: white;
+        cursor: pointer;
+        font-size: 14px;
+        padding-left: 30px;
+        text-decoration: none;
+    }
+
+    .footer a:hover{
+        text-decoration: underline;
+    }
