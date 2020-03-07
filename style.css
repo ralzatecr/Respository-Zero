@@ -82,6 +82,29 @@
         margin-right: 10px;
     }
 
+    .login__container--Iniciar a{
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        padding-left: 30px;
+        text-decoration: none;
+    }
+
+    .login__container--Iniciar { /* Todas las imagenes dentro del div que esten dentro de esa clase */
+        text-align: center;
+    }
+
+    .login__container--Iniciar a> div{ /* Todas las imagenes dentro del div que esten dentro de esa clase */
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    .login__container--Iniciar a:hover{
+        text-decoration: underline;
+    }
+
     .login__container--register{
         color: white;
         font-size: 14px;
@@ -127,7 +150,24 @@
         height: 50px;
         letter-spacing: 1px;
         margin: 10px 0px;
+    }
 
+    .button2{
+        background-color: rgba(255, 255, 255, 0.1);
+        border:none;
+        color: white;
+        cursor: pointer; /* Para que aparezca la manita de presionar */
+        font-size: 16px;
+        font-weight: bold;
+        font-family: 'Muli', sans-serif;
+        height: 50px;
+        letter-spacing: 1px;
+        margin: 10px 0px;
+    }
+
+    .login__container--social-media > div > img{ /* Todas las imagenes dentro del div que esten dentro de esa clase */
+        width: 30px;
+        margin-right: 10px;
     }
 
     .footer{
