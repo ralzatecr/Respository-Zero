@@ -19,7 +19,7 @@
     }
 
     .login{
-        background:linear-gradient(#21C08B,#AB88FF);
+        background:linear-gradient(#21C08B,#486499);
         display: flex; /* Para acomodar los componentes */
         align-items: center; /* Alinear itesm*/
         justify-content: center; /* Alinear de forma horizontal*/
@@ -171,7 +171,7 @@
     }
 
     .footer{
-        background-color: #AB88FF;
+        background-color: #486499;
         display: flex;
         align-items: center;
         height: 100px;
@@ -188,4 +188,18 @@
 
     .footer a:hover{
         text-decoration: underline;
+    }
+
+    @media only screen and (max-width: 600px){
+    /*Media querys utilizado para que el diseño se ajuste a las diferentes pantallas, telefonos, tablets.*/
+     .login__container{
+         background-color: transparent;
+         border: none;
+         padding: 0px;
+         width: 100%;
+     }
+     .footer{ /* esta parte se usa para acomodar todo en columna */
+         align-items:flex-start ;
+         flex-direction: column;
+     }
     }
