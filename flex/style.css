@@ -1,0 +1,56 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    display: flex;
+    height: 100vh;
+    /*flex-direction: column;*/
+    flex-flow: column;/*shorthand*/
+    font-size: 16px;
+  }
+  
+  .header{
+    outline: 1px solid;
+    height : 3rem;
+  }
+  
+  .container{
+    display: flex; /*Un flex item puede ser un flex container tambien*/
+    height : inherit; /*hereda la altura de su padre*/
+  }
+  
+  .content{
+    outline: 1px solid;
+    flex: 1 1 auto;
+  }
+  
+  .aside{
+    outline: 1px solid;
+    flex: 0 0 25%; /*shorthand para: flex: grow, shrink,(valores abs pos) basis(valores fijos, absolutos o relativos)  */
+  }
+  
+  .footer{
+    outline: 1px solid; /*delimitar cada uno de los elementos, outline se dibuja pero no ocupa espacio*/
+    height : 6rem;
+    margin-top: auto;/*display flex en el body, margin auto toma todo el espacio disponible en la direccion que hayamos indicado */
+  }
+  
+  .menu{
+    display: flex;
+  }
+  
+  .menu-item{
+    list-style: none;
+    flex: 1;
+    outline: 1px solid cyan;
+    line-height: 3rem;
+    text-align: center;
+    transition: flex .5s; /*tiempo en cambiar de 1ps a 8, suavidad.*/
+  }
+  
+  .menu-item:hover{/*paso del mouse por encima*/
+    flex:8 ; /*crece en 8 pixeles cuando se pasa el mouse.*/ 
+  }

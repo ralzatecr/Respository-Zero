@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscador metodologia BEM</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli&display=swap"><!--fuentes para los parrafos https://fonts.google.com/-->
-    <link rel="stylesheet" href="../style.css"><!--importar el archivo de estilos-->
+    <link rel="stylesheet" href="../style copy.css"><!--importar el archivo de estilos-->
 </head>
 <body>
     <header class="header">
-        <img class="header__img" src="../assets/logo.png" alt="">
+        <img class="header__img" src="../assets/logo.png" alt="logo" tabindex="0">
     </header>
     <section class="login">
         <section class="login__container">
-            <h2>Inicio de Sesión</h2>
+            <h2 tabindex="0">Inicio de Sesión</h2>
             <form class="login__container--form" action="">
-                <input class="input" type="text" placeholder="Correo"><!--placeholder para poner una leyenda a la caja de texto-->
-                <input class="input" type="password" placeholder="Contraseña">
+                <input class="input" type="text" aria-label="Correo" placeholder="Correo"><!--placeholder para poner una leyenda a la caja de texto-->
+                <input class="input" type="password" aria-label="Contraseña" placeholder="Contraseña"><!--aria-label para poner label a los tag que no se quieren very para accesibilidad.-->
                 <button class="button">Iniciar Sesión</button>
                 <div class="login__container--remember-me">
                     <label> <!--<label for="">el for es para definir a que input hace referencia, en este caso no se usa-->
