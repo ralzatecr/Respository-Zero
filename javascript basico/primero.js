@@ -184,3 +184,181 @@ var resultado = numero === 1 ? "Si numero entero" : "No soy entero";
 
 
 
+--------->SWITCH
+
+var numero = '1';
+switch(numero){
+    //para validacion de casos
+    case 1:
+        console.log(" Soy le primer");
+        break;
+    case 2:
+        console.log(" Soy diez");
+        break;
+    default:
+        console.log("Vacio");
+}/* 
+sin el break salen todas la validaciones default no usa break */
+
+
+--------->ARRAYS
+
+/* estructura de datos, tipo objeto, valor que guarda valores */
+var frutas = ["pera", "manzana", "naranja", "mora"];
+console.log(frutas);
+
+
+console.log(frutas[0]);
+
+console.log(frutas.length); /* cuantos elementos tiene */
+
+var masFruta = frutas.push("cereza"); /* añade elementos. */
+var menosFruta = frutas.pop("mora"); /* elimina al final. */
+var agreFruta = frutas.unshift("kiwi"); /* agrega al incio*/
+var eliFruta = frutas.shift("kiwi"); /* elimina del inicio */
+var posFruta = frutas.indexOf("cereza") /* Posicion del elemento */
+
+
+--------->FOR 
+
+var estudiantes = ["Maria","Sergio","Rosa","Daniel","Ruben"];
+
+function saludarEstudiantes(persona){
+    console.log(`Hola, ${persona}`);   
+}
+
+for(var i = 0; i < estudiantes.length; i++){
+    saludarEstudiantes(estudiantes[i]);
+}
+/******************************************/
+
+--------->FOR...OF
+var estudiantes = ["Maria","Sergio","Rosa","Daniel","Ruben"];
+
+function saludarEstudiantes(persona){
+    console.log(`Hola, ${persona}`);   
+}
+
+for(var persona of estudiantes){ //variable independiente de array en plural.
+    saludarEstudiantes(persona);
+}
+
+
+--------->WHILE 
+var estudiantes = ["Maria","Sergio","Rosa","Daniel","Ruben"];
+function saludarEstudiantes(persona){
+    console.log(`Hola, ${persona}`);   
+}
+
+while (estudiantes.length > 0) {
+    console.log(estudiantes);
+    var persona = estudiantes.shift(); /* metodo de mutacion? sacando elemento del array*/
+    saludarEstudiantes(persona);
+}
+
+--------->OBJETOS
+var miAuto = {
+    marca: "Toyota",
+    modelo: "sonico",
+    ano: 2020
+};
+miAuto
+miAuto.marca
+
+
+var miAuto = {
+    marca: "Toyota",
+    modelo: "sonico",
+    ano: 2020, 
+    detalleDelAuto: function() {
+        console.log(`Auto ${this.modelo} ${this.ano}`);
+/*      this variable que hace referenci al objeto, miAuto */
+    }
+};
+
+miAuto.detalleDelAuto();
+
+
+--------->OBJETOS CONSTRUCTORES
+
+
+var miAuto = {
+    marca: "Toyota",
+    modelo: "sonico",
+    ano: 2020, 
+    detalleDelAuto: function() {
+        console.log(`Auto ${this.modelo} ${this.ano}`);
+    }
+};
+
+function auto(marca, modelo, ano) {
+    this.marca = marca;
+    this.modelo = modelo; 
+    this.ano = ano;
+
+}
+
+var autoNuevo = new auto("Tesla", "Modelo 3", 2020);/* genera una instacia del constructor. objeto que deriva de otro objeto. */
+var autoNuevo2 = new auto("Tesla", "Modelo X", 2021);
+var autoNuevo3 = new auto("Mazda", "MZ 2", 2019);
+
+Funcion crear mas de un objeto......
+
+var personasArray= [];
+
+function persona(nombre,edad){
+    this.nombre = nombre;
+    this.edad = edad;
+}
+
+/* Programa para crear varios objetos de mismo tipo 
+pasando a un array */
+var numeroPersonas = prompt('cuantas personas quieres hacer?');
+if(numeroPersonas>0){
+    for(var i=0;i<numeroPersonas;i++){
+        var nombre = prompt('digite el nombre de la persona ' + i);
+        var edad = parseInt(prompt('digite la edad de la persona '+i));
+        var personita = new persona(nombre,edad);
+        personasArray.push(personita);
+}
+}else{
+    alert('no digito numero de personas valido')
+}
+console.log(personasArray);
+
+
+--------->METODOS DE RECORRIDO DE ARRAYS
+//No modifican el array original
+
+var persona = [
+    { cedula: 80, nombre: "Alzate", sueldo: 100 },
+    { cedula: 81, nombre: "Cruz", sueldo: 200 },
+    { cedula: 82, nombre: "Figueroa", sueldo: 300 },
+    { cedula: 83, nombre: "Gomez", sueldo: 400 },
+    { cedula: 84, nombre: "Triana", sueldo: 500 },
+];
+//Metodo 1. filter especifico array nuevo con el valor pedido
+var empFiltrados = persona.filter(function (persona) {
+    return persona.sueldo <= 300
+})
+
+//Metodo 2. map valores.
+var empNombre = persona.map(function(persona) {
+    return persona.nombre;
+})
+
+//metodo 3. find
+var empEncuentra = persona.find(function(persona){
+    return persona.nombre === "Alzate";
+})
+
+//metodo 4. for each filtrado sobre el array sin modificarlo
+persona.forEach(function(persona){
+    console.log(persona.cedula + persona.nombre);
+});
+
+//metodo 5 some, validacion verdad o falso
+var empCosto = persona.some(function(persona){
+    return persona.sueldo <= 400;
+})
+
