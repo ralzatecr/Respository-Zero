@@ -281,7 +281,6 @@ miAuto.detalleDelAuto();
 
 --------->OBJETOS CONSTRUCTORES
 
-
 var miAuto = {
     marca: "Toyota",
     modelo: "sonico",
